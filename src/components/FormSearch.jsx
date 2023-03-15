@@ -1,5 +1,3 @@
-import style from "./style.css";
-
 const FormSearch = ({ search, handleChangeSearch, handleForm }) => {
   return (
     <div>
