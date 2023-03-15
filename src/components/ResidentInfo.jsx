@@ -15,31 +15,44 @@ const ResidentInfo = ({ urlResident }) => {
   useEffect(() => {
     loadResident();
   }, []);
-
   return (
     <>
       {residents && (
-        <div>
-          <img src={residents.image} alt="" />
-          <h2>{residents.name}</h2>
-          <ul>
-            <li>Specie</li>
-            <li>
-              <span>{residents.species}</span>
-            </li>
-            <li>Status</li>
-            <li>
-              <span>{residents.status}</span>
-            </li>
-            <li>Origen</li>
-            <li>
-              <span>{residents.origin.name}</span>
-            </li>
-            <li>Appearances in episodes</li>
-            <li>
-              <span>{residents.episode.length}</span>
-            </li>
-          </ul>
+        <div className="card">
+          <div className="card-img">
+            <img src={residents.image} alt="" />
+            <p className="status">
+              <span
+                className={
+                  residents.status === "Dead"
+                    ? "dead"
+                    : residents.status === "Alive"
+                    ? "alive"
+                    : "unknown"
+                }
+              >
+                ⬤{" "}
+              </span>
+              {residents.status}
+            </p>
+          </div>
+          <div className="card-info">
+            <h2>{residents.name}</h2>
+            <ul>
+              <li>Specie</li>
+              <li>
+                <span>{residents.species}</span>
+              </li>
+              <li>Origen</li>
+              <li>
+                <span>{residents.origin.name}</span>
+              </li>
+              <li>Appearances in episodes</li>
+              <li>
+                <span>{residents.episode.length}</span>
+              </li>
+            </ul>
+          </div>
         </div>
       )}
     </>
