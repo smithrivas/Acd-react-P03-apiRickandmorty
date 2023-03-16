@@ -58,11 +58,9 @@ function App() {
   return (
     <div className="App">
       <div>
-        <img
-          className="banner"
-          src="https://i.redd.it/o6cwlzg3exk41.png"
-          alt="Image-banner"
-        />
+        <a href="">
+          <img className="banner" src="/banner.png" alt="Image-banner" />
+        </a>
       </div>
       <div className="container">
         <FormSearch
