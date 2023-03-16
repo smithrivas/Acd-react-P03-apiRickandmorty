@@ -45,7 +45,7 @@ body{
   text-align: center;  
 }
 .form-search > input{
-  width: 40rem;
+  width: 60rem;
 }
 @media (max-width: 768px){
   .form-search > input{
